@@ -1,0 +1,10 @@
+<h1>Reviews#index</h1>
+<p>Find me in app/views/reviews/index.html.erb</p>
+
+
+
+<% @reviews.each do |review| %>
+  <h2><%= review.content %></h2>
+  <p><%= review.rating %> * </p>
+  <hr>
+<% end %>

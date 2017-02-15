@@ -1,0 +1,16 @@
+
+<%= link_to("Home", restaurants_path, class: "btn btn-danger btn-sm")%>
+<hr>
+<h1><%= @restaurant.name %></h1>
+<p><%= @restaurant.category %></p>
+<p>contact : <%= @restaurant.address %> - <%= @restaurant.phone_number %> </p>
+
+<p>commentaires sur <%= @restaurant.name %></p>
+<%= link_to("Add a review", new_restaurant_review_path(@restaurant), class: "btn btn-danger btn-sm")%>
+
+<% @reviews.each do |review| %>
+  <hr>
+  <p><%= "*" * review.rating %> <%= review.content %></p>
+<% end %>
+
+
